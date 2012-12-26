@@ -19,8 +19,10 @@ database to be connected to any other object as you see on the diagram.
 However by extending the ORM models, we can create a nice syntactic
 sugar you can use throughout your application:
 
+![Demo Screenshot](https://raw.github.com/romaninsh/manytomany/master/screenshot2.png)
 
-Example 1
+
+Code Example 1
 
 
         // Get all comments for an article
@@ -30,7 +32,7 @@ Example 1
         // And allow to edit them in a CRUD
         $this->add('CRUD')->setModel($m);
 
-Example 2
+Code Example 2
 
         // Generic page allowing to add any child to any object
 
@@ -42,6 +44,8 @@ Example 2
         if($f->isSubmitted()){
             $f->update()->js()->univ()->successMessage('Cool!')->execute();
         }
+
+More Examples: https://github.com/romaninsh/manytomany/blob/master/page/index.php
 
 The above implementation maintains the integrity of the database
 entirely. Although the code to implement this structure using Agile
